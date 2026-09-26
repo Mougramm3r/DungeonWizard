@@ -1,0 +1,30 @@
+name: DungeonWizard
+version: '${project.version}'
+main: de.deinserver.dungeonwizard.DungeonWizardPlugin
+api-version: '1.21'
+softdepend: [WorldEdit, FastAsyncWorldEdit]
+author: DeinServer
+
+# Bewusst KEIN eigener /leave-Befehl: ArenaWizard2 belegt /leave bereits, alle
+# Spiel-Plugins sollen parallel installierbar bleiben. Verlassen geht ueber /dwz leave.
+commands:
+  dwz:
+    description: Hauptbefehl von DungeonWizard (Beitreten, Verlassen, Dungeon-Verwaltung, ...)
+    usage: /dwz <join|leave|list|info|owner|create|edit|remove|reload|cancel|forcestop|mob|boss>
+
+permissions:
+  dwz.wizard:
+    description: Erlaubt den Item-Wizard (/dwz create, /dwz edit) und die Mob-/Boss-Editoren
+    default: op
+  dwz.remove:
+    description: Erlaubt das Loeschen von Dungeons per /dwz remove
+    default: op
+  dwz.reload:
+    description: Erlaubt /dwz reload
+    default: op
+  dwz.forcestop:
+    description: Erlaubt das sofortige Beenden eines Dungeon-Durchlaufs per /dwz forcestop
+    default: op
+  dwz.bypass.blacklist:
+    description: Erlaubt das Mitnehmen gesperrter Items (blacklist-materials) in einen Dungeon
+    default: op

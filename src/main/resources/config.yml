@@ -1,0 +1,25 @@
+# DungeonWizard - Konfiguration (Phase 0: Platzhalter, Werte werden ab Phase 1 benutzt)
+
+# Welt, in die Spieler nach dem Dungeon zurueckkehren, falls ihre gespeicherte
+# Rueckkehr-Position nicht mehr gueltig ist.
+main-lobby-world: world
+
+min-players-default: 1
+max-players-default: 4
+end-seconds: 10
+reconnect-grace-seconds: 60
+
+# Standardwerte fuer neue Dungeons; der Owner kann sie bei /dwz join new aendern,
+# sofern der Dungeon das nicht sperrt.
+default-loot-rule: FOUND_ONLY
+default-lives: 3
+default-late-join: true
+
+# Befehle, die waehrend eines laufenden Dungeons erlaubt sind (ohne Schraegstrich).
+command-whitelist: [dwz, msg, tell, r, pwz, party]
+
+items-per-chest-min: 2
+items-per-chest-max: 5
+
+# Items, die man nicht mit in einen Dungeon nehmen darf (Beitritt wird abgelehnt).
+blacklist-materials: [ENDER_PEARL, CHORUS_FRUIT, ELYTRA]
